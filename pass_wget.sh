@@ -11,4 +11,4 @@ read password
 stty echo
 echo
 #入力されたパスワードでダウンロードを行う
-wget -q --password="$password" "ftp://${username}@${hostname}/filename.txt"
+curl -s -u "${username}:${password}" "ftp://${hostname}/filename.txt"
